@@ -1,0 +1,69 @@
+/* font used on the whole site */
+*{
+    font-family: 'Comfortaa', cursive;
+}
+
+body{
+    background-color: #6495ED;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    
+}
+/* header/navbar*/
+#header {
+    padding: 15px 40px;
+}
+#navbar {
+    font-size: 50px;
+    color: aliceblue;
+    text-shadow: 2px 2px #2a4464;
+    text-align: center;
+}
+/* search bar*/
+#searchbar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#input {
+    padding: 5px;
+    border-radius: 5px;
+    width: 300px;
+    height: 20px;
+    font-size: 18px;
+}
+#go{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+}
+/*warningn message*/
+#achtung {
+    text-align: center;
+    background-color: #5c46d6;
+    border-radius: 10px;
+    box-shadow: 5px 7px rgb(63, 48, 133);
+}
+#warningmessage {
+    font-size: 40px;
+    color: rgb(207, 189, 250);
+}
+/* display information */
+#information {
+    margin-top: 50px;
+    border: solid #335085;
+    background-color: #ebf2ff;
+    height: 250px;
+    border-radius: 20px;
+}
+#country{
+    padding-left: 40px;
+    font-size: 50px;
+}
+#cases{
+    padding-left: 40px;
+    font-size: 40px;
+}

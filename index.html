@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Corona search</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css"> 
+        <!-- Adding a font from google-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+        <script src="api.js"></script>
+    </head>
+    <body>
+        <div>
+            <header id="header">
+                <div class="wrapper">
+                    <!-- Page title-->
+                    <h1 id="navbar">Corona in the World</h1>
+                </div>
+            </header>
+            <main>
+                <div class="wrapper">
+                    <!-- Searchbar with button-->
+                    <div id="searchbar">
+                        <input id="input" type="text" placeholder="Search by country">
+                        <button id="go">Go!</button>
+                    </div >
+                    <!-- warning message if input is wrong-->
+                    <div id="achtung">
+                        <h3 id="warningmessage"></h3>
+                    </div>
+                    <!-- Box that has all the displayable text-->
+                    <div id="information">
+                        <h2 id="country"></h2>
+                        <h4 id="cases"></h4>
+                    </div>
+                </div>
+            </main>
+            <footer>
+
+            </footer>
+        </div>
+    </body>
+</html>
