@@ -6,6 +6,7 @@
 body{
     background-color: #6495ED;
     background-image: url("images/planet-3157167_1920.jpg");
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -18,7 +19,7 @@ body{
     padding: 15px 40px;
 }
 #navbar {
-    font-size: 50px;
+    font-size: 60px;
     color: aliceblue;
     text-shadow: 2px 2px #2a4464;
     text-align: center;
@@ -58,17 +59,23 @@ body{
     border: solid #335085;
     background-color: #ebf2ff;
     opacity: 90%;
-    height: 250px;
+    height: 300px;
     border-radius: 20px;
 }
 #country{
     padding-left: 40px;
     font-size: 50px;
 }
+#country::first-letter{
+    text-transform: capitalize;
+}
+
 #cases{
     padding-left: 40px;
     font-size: 40px;
+    float: left;
 }
+
 /*footer*/
 #footer{
     color: white;
