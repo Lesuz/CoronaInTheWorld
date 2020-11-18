@@ -5,6 +5,7 @@
 
 body{
     background-color: #6495ED;
+    background-image: url("images/planet-3157167_1920.jpg");
 }
 
 .wrapper {
@@ -56,6 +57,7 @@ body{
     margin-top: 50px;
     border: solid #335085;
     background-color: #ebf2ff;
+    opacity: 90%;
     height: 250px;
     border-radius: 20px;
 }
@@ -66,4 +68,13 @@ body{
 #cases{
     padding-left: 40px;
     font-size: 40px;
+}
+/*footer*/
+#footer{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
+    margin: 0;
+    width: 100%;
 }
