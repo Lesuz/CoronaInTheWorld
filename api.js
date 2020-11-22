@@ -23,12 +23,14 @@ window.onload = function(){
         // year-month-date
         var datum = new Date();
         var date = datum.getDate();
-        var month = datum.getMonth();
+        // getMonth() starts from 0 so have to add 1
+        var month = datum.getMonth() + 1;
         var year = datum.getFullYear();
 
         // Check if searchbar is empty
         if(wantedCountry === "" || wantedCountry === " "){
             warning.innerHTML = "Invalid input, try typing a country";
+            document.getElementById("information").style.display = "none";
         }else{
             // TODO - input validation, does the wanted country exists
             displayCountry.innerHTML = wantedCountry;
