@@ -24,10 +24,15 @@ body{
     text-shadow: 2px 2px #2a4464;
     text-align: center;
 }
+#year {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+}
 /* search bar*/
 #searchbar {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
 }
 #input {
@@ -43,7 +48,7 @@ body{
     border-radius: 5px;
     background-color: white;
 }
-/*warningn message*/
+/*warning message*/
 #achtung {
     text-align: center;
     background-color: #5c46d6;
@@ -76,7 +81,32 @@ body{
     font-size: 40px;
     float: left;
 }
+#casesbymonth {
+    margin-top: 50px;
+    border: solid #335085;
+    background-color: #ebf2ff;
+    opacity: 90%;
+    height: 360px;
+    border-radius: 20px;
+}
+#casesbymonthtitle{
+    padding-left: 25px;
+    font-size: 25px;
+}
 
+table {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+tr, td{
+    padding-top: 20px;
+}
+td {
+    border-bottom: 3px solid #708bbe;
+    border-radius: 5px;
+    width: auto;
+}
 /*footer*/
 #footer{
     color: white;
