@@ -35,6 +35,8 @@ window.onload = function(){
         if(wantedCountry === "" || wantedCountry === " "){
             warning.innerHTML = "Invalid input, try typing a country";
             document.getElementById("information").style.display = "none";
+
+        // TODO - does the inputted country exist
         }else{
             // TODO - input validation, does the wanted country exists
             displayCountry.innerHTML = wantedCountry;
@@ -53,92 +55,87 @@ window.onload = function(){
 
                     // get the cases - number from the last array and display it to the right place
                     var caseAmount = parsedData[parsedData.length -1].Cases
-                   
                     displayCases.innerHTML = "Cases: " + caseAmount;
-                    console.log(parsedData);
 
-                    // Covid Api begins from the 1st or march so it is week 0
                     // look for the information for every month
                     // saving the length of the table into variable - one day = one index
-                    var tablelength = parsedData.length
-                    console.group(tablelength);
+                    var tablelength = parsedData.length;
 
                     // TODO - Figure out why it shows the cases one month off
                     for ( var i = 0; i < tablelength; i++){
-                        // january
-                        console.log(parsedData[i].Date.substring(5,7));
+                        // date is a string in the array, and I want to use the month to get every months cases
+                        // so I use substring() to get the indexes of 5 and 6
+
+                        // january - takes the last index where month is still 01
                         if (parsedData[i].Date.substring(5 ,7) === "01"){
 
-                            var jancases = parsedData[i].Cases
-                            console.log(parsedData[9].Cases);
-                            console.log("tammikuu:" + jancases);
+                            var jancases = parsedData[i].Cases ;
                             document.getElementById("casesinjan").innerHTML = jancases;
                         }
-                        // february
+                        // february - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "02"){
 
-                            var febcases = parsedData[i].Cases
-                            console.log("helmikuu:" + febcases);
+                            var febcases = parsedData[i].Cases ;
                             document.getElementById("casesinfeb").innerHTML = febcases - jancases;
                         }
-                        // march
+                        // march - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "03"){
 
-                            var marchcases = parsedData[i].Cases
-                            console.log("maaliskuu:" + marchcases);
+                            var marchcases = parsedData[i].Cases;
                             document.getElementById("casesinmar").innerHTML = marchcases - febcases;
                         }
-                        // april
+                        // april - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "04"){
 
-                            var aprilcases = parsedData[i].Cases
+                            var aprilcases = parsedData[i].Cases;
                             document.getElementById("casesinapril").innerHTML = aprilcases - marchcases;
                         }
-                        // may
+                        // may - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "05"){
-                            var maycases = parsedData[i].Cases
+
+                            var maycases = parsedData[i].Cases;
                             document.getElementById("casesinmay").innerHTML = maycases - aprilcases ;
                         }
-                        // june
+                        // june - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "06"){
 
-                            var junecases = parsedData[i].Cases
+                            var junecases = parsedData[i].Cases;
                             document.getElementById("casesinjun").innerHTML = junecases - maycases;
                         }
-                        // july
+                        // july - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "07"){
 
-                            var julycases = parsedData[i].Cases
+                            var julycases = parsedData[i].Cases;
                             document.getElementById("casesinjul").innerHTML = julycases - junecases;
                         }
-                        // august
+                        // august - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "08"){
 
-                            var augustcases = parsedData[i].Cases
+                            var augustcases = parsedData[i].Cases;
                             document.getElementById("casesinaug").innerHTML = augustcases - julycases;
                         }
-                        // september
+                        // september - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "09"){
 
-                            var septembercases = parsedData[i].Cases
+                            var septembercases = parsedData[i].Cases;
                             document.getElementById("casesinsep").innerHTML = septembercases - augustcases;
                         }
-                        // october
+                        // october - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "10"){
 
-                            var octobercases = parsedData[i].Cases
+                            var octobercases = parsedData[i].Cases;
                             document.getElementById("casesinoct").innerHTML = octobercases - septembercases;
                         }
-                        // november
+                        // november - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "11"){
 
-                            var novembercases = parsedData[i].Cases
+                            var novembercases = parsedData[i].Cases;
                             document.getElementById("casesinnov").innerHTML = novembercases - octobercases;
                         }
-                        // december
+                        // december - reduce the amount of cases by the last months cases
                         if (parsedData[i].Date.substring(5 ,7) === "12"){
 
-                            var decembercases = parsedData[i].Cases
+                            var decembercases = parsedData[i].Cases;
                             document.getElementById("casesindec").innerHTML = decembercases - novembercases;
                         }
 
