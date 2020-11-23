@@ -55,6 +55,7 @@ window.onload = function(){
                     var caseAmount = parsedData[parsedData.length -1].Cases
                    
                     displayCases.innerHTML = "Cases: " + caseAmount;
+                    console.log(parsedData);
 
                     // Covid Api begins from the 1st or march so it is week 0
                     // look for the information for every month
@@ -65,74 +66,79 @@ window.onload = function(){
                     // TODO - Figure out why it shows the cases one month off
                     for ( var i = 0; i < tablelength; i++){
                         // january
-                        if (parsedData[i].Date.substring(5 ,7) == "02"){
+                        console.log(parsedData[i].Date.substring(5,7));
+                        if (parsedData[i].Date.substring(5 ,7) === "01"){
 
-                            var jancases = parsedData[i - 1].Cases
+                            var jancases = parsedData[i].Cases
+                            console.log(parsedData[9].Cases);
+                            console.log("tammikuu:" + jancases);
                             document.getElementById("casesinjan").innerHTML = jancases;
                         }
                         // february
-                        if (parsedData[i].Date.substring(5 ,7) == "03"){
+                        if (parsedData[i].Date.substring(5 ,7) === "02"){
 
-                            var febcases = parsedData[i - 1].Cases
+                            var febcases = parsedData[i].Cases
+                            console.log("helmikuu:" + febcases);
                             document.getElementById("casesinfeb").innerHTML = febcases - jancases;
                         }
                         // march
-                        if (parsedData[i].Date.substring(5 ,7) == "04"){
+                        if (parsedData[i].Date.substring(5 ,7) === "03"){
 
-                            var marchcases = parsedData[i - 1].Cases
+                            var marchcases = parsedData[i].Cases
+                            console.log("maaliskuu:" + marchcases);
                             document.getElementById("casesinmar").innerHTML = marchcases - febcases;
                         }
                         // april
-                        if (parsedData[i].Date.substring(5 ,7) == "05"){
+                        if (parsedData[i].Date.substring(5 ,7) === "04"){
 
-                            var aprilcases = parsedData[i - 1].Cases
+                            var aprilcases = parsedData[i].Cases
                             document.getElementById("casesinapril").innerHTML = aprilcases - marchcases;
                         }
                         // may
-                        if (parsedData[i].Date.substring(5 ,7) == "06"){
-                            var maycases = parsedData[i - 1].Cases
+                        if (parsedData[i].Date.substring(5 ,7) === "05"){
+                            var maycases = parsedData[i].Cases
                             document.getElementById("casesinmay").innerHTML = maycases - aprilcases ;
                         }
                         // june
-                        if (parsedData[i].Date.substring(5 ,7) == "07"){
+                        if (parsedData[i].Date.substring(5 ,7) === "06"){
 
-                            var junecases = parsedData[i - 1].Cases
+                            var junecases = parsedData[i].Cases
                             document.getElementById("casesinjun").innerHTML = junecases - maycases;
                         }
                         // july
-                        if (parsedData[i].Date.substring(5 ,7) == "08"){
+                        if (parsedData[i].Date.substring(5 ,7) === "07"){
 
-                            var julycases = parsedData[i - 1].Cases
+                            var julycases = parsedData[i].Cases
                             document.getElementById("casesinjul").innerHTML = julycases - junecases;
                         }
                         // august
-                        if (parsedData[i].Date.substring(5 ,7) == "09"){
+                        if (parsedData[i].Date.substring(5 ,7) === "08"){
 
-                            var augustcases = parsedData[i - 1].Cases
+                            var augustcases = parsedData[i].Cases
                             document.getElementById("casesinaug").innerHTML = augustcases - julycases;
                         }
                         // september
-                        if (parsedData[i].Date.substring(5 ,7) == "10"){
+                        if (parsedData[i].Date.substring(5 ,7) === "09"){
 
-                            var septembercases = parsedData[i - 1].Cases
+                            var septembercases = parsedData[i].Cases
                             document.getElementById("casesinsep").innerHTML = septembercases - augustcases;
                         }
                         // october
-                        if (parsedData[i].Date.substring(5 ,7) == "11"){
+                        if (parsedData[i].Date.substring(5 ,7) === "10"){
 
-                            var octobercases = parsedData[i - 1].Cases
+                            var octobercases = parsedData[i].Cases
                             document.getElementById("casesinoct").innerHTML = octobercases - septembercases;
                         }
                         // november
-                        if (parsedData[i].Date.substring(5 ,7) == "12"){
+                        if (parsedData[i].Date.substring(5 ,7) === "11"){
 
-                            var novembercases = parsedData[i - 1].Cases
+                            var novembercases = parsedData[i].Cases
                             document.getElementById("casesinnov").innerHTML = novembercases - octobercases;
                         }
                         // december
-                        if (parsedData[i].Date.substring(5 ,7) == "01" && parsedData[i].Date.substring(0 ,5) == "2021"){
+                        if (parsedData[i].Date.substring(5 ,7) === "12"){
 
-                            var decembercases = parsedData[i - 1].Cases
+                            var decembercases = parsedData[i].Cases
                             document.getElementById("casesindec").innerHTML = decembercases - novembercases;
                         }
 
