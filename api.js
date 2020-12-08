@@ -35,8 +35,6 @@ window.onload = function(){
         if(wantedCountry === "" || wantedCountry === " "){
             warning.innerHTML = "Invalid input, try typing a country";
             document.getElementById("information").style.display = "none";
-
-        // TODO - does the inputted country exist
         }else{
             // TODO - input validation, does the wanted country exists
             displayCountry.innerHTML = wantedCountry;
@@ -61,7 +59,6 @@ window.onload = function(){
                     // saving the length of the table into variable - one day = one index
                     var tablelength = parsedData.length;
 
-                    // TODO - Figure out why it shows the cases one month off
                     for ( var i = 0; i < tablelength; i++){
                         // date is a string in the array, and I want to use the month to get every months cases
                         // so I use substring() to get the indexes of 5 and 6
