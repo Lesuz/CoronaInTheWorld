@@ -51,8 +51,6 @@ window.onload = function(){
                     // parse the data
                     var parsedData = JSON.parse(data) ;
 
-                    console.log(parsedData);
-
                     // get the cases - number from the last array and display it to the right place
                     var caseAmount = parsedData[parsedData.length -1].Cases
                     displayCases.innerHTML = "Cases in total: " + caseAmount ;
