@@ -51,9 +51,11 @@ window.onload = function(){
                     // parse the data
                     var parsedData = JSON.parse(data) ;
 
+                    console.log(parsedData);
+
                     // get the cases - number from the last array and display it to the right place
                     var caseAmount = parsedData[parsedData.length -1].Cases
-                    displayCases.innerHTML = "Cases: " + caseAmount;
+                    displayCases.innerHTML = "Cases in total: " + caseAmount ;
 
                     // look for the information for every month
                     // saving the length of the table into variable - one day = one index
@@ -64,73 +66,73 @@ window.onload = function(){
                         // so I use substring() to get the indexes of 5 and 6
 
                         // january - takes the last index where month is still 01
-                        if (parsedData[i].Date.substring(5 ,7) === "01"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-01" ){
 
                             var jancases = parsedData[i].Cases ;
                             document.getElementById("casesinjan").innerHTML = jancases;
                         }
                         // february - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "02"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-02"){
 
                             var febcases = parsedData[i].Cases ;
                             document.getElementById("casesinfeb").innerHTML = febcases - jancases;
                         }
                         // march - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "03"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-03"){
 
                             var marchcases = parsedData[i].Cases;
                             document.getElementById("casesinmar").innerHTML = marchcases - febcases;
                         }
                         // april - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "04"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-04"){
 
                             var aprilcases = parsedData[i].Cases;
                             document.getElementById("casesinapril").innerHTML = aprilcases - marchcases;
                         }
                         // may - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "05"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-05"){
 
                             var maycases = parsedData[i].Cases;
                             document.getElementById("casesinmay").innerHTML = maycases - aprilcases ;
                         }
                         // june - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "06"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-06"){
 
                             var junecases = parsedData[i].Cases;
                             document.getElementById("casesinjun").innerHTML = junecases - maycases;
                         }
                         // july - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "07"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-07"){
 
                             var julycases = parsedData[i].Cases;
                             document.getElementById("casesinjul").innerHTML = julycases - junecases;
                         }
                         // august - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "08"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-08"){
 
                             var augustcases = parsedData[i].Cases;
                             document.getElementById("casesinaug").innerHTML = augustcases - julycases;
                         }
                         // september - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "09"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-09"){
 
                             var septembercases = parsedData[i].Cases;
                             document.getElementById("casesinsep").innerHTML = septembercases - augustcases;
                         }
                         // october - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "10"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-10"){
 
                             var octobercases = parsedData[i].Cases;
                             document.getElementById("casesinoct").innerHTML = octobercases - septembercases;
                         }
                         // november - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "11"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-11"){
 
                             var novembercases = parsedData[i].Cases;
                             document.getElementById("casesinnov").innerHTML = novembercases - octobercases;
                         }
                         // december - reduce the amount of cases by the last months cases
-                        if (parsedData[i].Date.substring(5 ,7) === "12"){
+                        if (parsedData[i].Date.substring(0 ,7) === "2020-12"){
 
                             var decembercases = parsedData[i].Cases;
                             document.getElementById("casesindec").innerHTML = decembercases - novembercases;
